@@ -1,0 +1,283 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+     background-image: url("https://images.pexels.com/photos/1137525/pexels-photo-1137525.jpeg?cs=srgb&dl=city-night-building-1137525.jpg&fm=jpg");
+     background-size: cover;
+     background-attachment: fixed;
+     color: #FFBFBF;
+     font-size: 1.1em;
+     font-family: 'Comic Sans MS' , sans-serif;
+}
+
+.heading{
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    margin-top: 100px;
+}
+
+#head{
+    font-size: 1.8em;
+}
+
+#subheading{
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+#content1{
+    width: 90%;
+    margin: auto;
+}
+
+form{
+    background-color: rgb(0,0,0,0.7); 
+    padding-top: 34px;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 10px;
+    padding-left: 20px;
+    padding-bottom: 30px;
+    padding-right: 20px;
+}
+
+form .box{
+    width: 98.5%;
+    height: 2.8em;
+    position: relative;
+    bottom: 10px;
+    border: 0;
+    border-radius: 5px;
+}
+
+#option1 select{
+    width: 98.5%;
+    height: 2.7em;
+    position: relative;
+    bottom: 10px;
+    border-radius: 5px;
+    border: 0;
+}
+
+#option2 select{
+    width: 98.5%;
+    height: 2.7em;
+    position: relative;
+    top: 10px;
+    border-radius: 5px;
+    border: 0;
+}
+
+#content2{
+    margin-top: 10px;
+}
+
+textarea{
+    width: 98.5%;
+    height: 125px;
+    position: relative;
+    bottom: 17px;
+}
+
+h3{
+    width: 98.5%;
+    height: 3em;
+    position: relative;
+    top: 11px;
+    text-align: center;
+    right: 16px;
+    background-color: rgb(18, 219, 78);
+    border:none;
+    color: rgb(255,255,255);
+    margin-bottom: 10px;
+    
+}
+
+a {
+    text-decoration: none !important;
+  }
+
+textarea::placeholder{
+    font-size: 1.4em;
+    position: relative;
+    top: 8px;
+    left: 5px;
+    width: 70%;
+}
+
+input::placeholder{
+    font-size: 1.1em;
+    position: relative;
+    left: 10px;
+    width: 50%;
+    font-weight: 500;
+}
+
+input.larger{
+    width: 20px;
+    height: 20px;
+}
+
+.wrapper{
+    padding: 30px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 1px 1px 5px 1px;
+}
+
+.wrapper header{
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.wrapper .poll-area{
+    margin: 20px 0 15px 0;
+}
+
+.poll-area label{
+    display: block;
+    margin-bottom: 10px;
+    padding: 8px 15px;
+    border: 2px solid;
+    transition: all 0.2s ease;
+}
+
+label.opt-1.selected{
+    border: 2px solid #cf2d00;
+
+}
+
+label.opt-2.selected{
+    border: 2px solid #4bcc00;
+
+}
+
+label.opt-2.selected{
+    border: 2px solid #4bcc00;
+
+}
+
+label.opt-3.selected{
+    border: 2px solid #cfbd00;
+
+}
+
+div#pstyle1::after{
+    background: #cf2d00;
+}
+
+div#pstyle2::after{
+    background:#4bcc00;
+}
+
+div#pstyle3::after{
+    background: #cfbd00;
+}
+
+label.opt-1.selected .row .circle{
+    border-color: #cf2d00;
+}
+
+label.opt-3.selected{
+    border: 2px solid #cfbd00;
+
+}
+
+label.opt-1 .row .circle::after{
+    background: #cf2d00;
+}
+
+label.opt-2 .row .circle::after{
+    background: #4bcc00;
+}
+
+label.opt-3 .row .circle::after{
+    background: #cfbd00;
+}
+
+label .row{
+    display: flex;
+    pointer-events: none;
+    justify-content: space-between;
+}
+
+label .row .column{
+    display: flex;
+    align-items: center;
+}
+
+label .row .circle{
+    height: 19px;
+    width: 19px;
+    display: block;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    margin-right: 10px;
+    position: relative;
+}
+
+label .row .circle::after{
+    content: "";
+    height: 11px;
+    width: 11px;
+    border-radius: inherit;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    display: none;
+}
+
+.poll-area label:hover .row .circle::after{
+    display: block;
+    background: #e6e6e6;
+}
+
+label.selected .row .circle::after{
+    display: block;
+}
+
+label .row span{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+label .row .percent{
+    display: none;
+}
+
+label .progress{
+    height: 7px;
+    width: 100px;
+    position: relative;
+    background: #f0f0f0;
+    margin: 8px 0 3px 0;
+    display: none;
+    pointer-events: none;
+}
+
+ .wrapper input[type="radio"],
+.wrapper input[type="checkbox"]{
+    display: none;
+}
+
+label .progress:after{
+    position: absolute;
+    content: "";
+    height: 100%;
+    background: #ccc;
+    width: calc(1% * var(--w));
+    border-radius: inherit;
+    transition: all 0.2s ease;
+}
+
+label.selectall .progress,
+label.selectall .row .percent{
+    display: block;
+}
